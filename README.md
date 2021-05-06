@@ -1,1 +1,1 @@
-# Minimax-and-AlphaBetaPruning-using-TicTacToe-and-Chess
+# Minimax and Alpha-Beta Pruning using Tic-Tac-Toe and Chess
