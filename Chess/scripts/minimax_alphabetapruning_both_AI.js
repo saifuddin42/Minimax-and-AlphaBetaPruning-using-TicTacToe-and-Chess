@@ -351,7 +351,8 @@ function getBestMove(game) {
     //isPruned = true;
 
     //Minimax without alpha-beta pruning
-    isPruned = false;
+//     set on line 4
+//     isPruned = false;
 
     // Get the start and end time to get the best move
     let time1 = new Date().getTime();
