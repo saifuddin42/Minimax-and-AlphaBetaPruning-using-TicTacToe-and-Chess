@@ -1,0 +1,56 @@
+.stats
+{
+    margin: 1% 1% 1% 1%;
+    border: 1px solid green;
+    width: 33%;
+}
+
+#movesPlayed, th, td
+{
+    border: 1px solid yellowgreen;
+    padding: 1%;
+    width: 40%;
+    text-align: center;
+}
+
+.stats div, h3
+{
+    padding: 1%;
+    color: black;
+    font-weight: 900;
+}
+
+.info span
+{
+    padding-top: 2%;
+    color: cornflowerblue;
+    font-weight: 900;
+}
+
+.stats span
+{
+    padding: 1%;
+    color: cornflowerblue;
+    font-weight: 900;
+}
+
+#search-depth
+{
+    margin: 1%;
+}
+
+button
+{
+    margin: 1.5%;
+}
+
+/* .black-3c85d
+{
+    background-color: cornflowerblue;
+    color: #87CEEB;
+}
+
+.white-1e1d7 {
+    background-color: #87CEEB;
+    color: cornflowerblue;
+} */

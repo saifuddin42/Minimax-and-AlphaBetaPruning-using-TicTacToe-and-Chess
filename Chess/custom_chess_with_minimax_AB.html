@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Chess - Alpha Beta Pruning</title>
+        <script type="text/javascript" src="scripts/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="src/chessboard/js/chessboard-1.0.0.js"></script>
+        <script type="text/javascript" src="src/chessboard/js/chess.js"></script>
+        <link rel="stylesheet" href="src/chessboard/css/chessboard-1.0.0.min.css">
+        <link rel="stylesheet" href="src/chessboard/css/customcss_chess.css">
+        <!-- <script type="text/javascript" src="scripts/minimax_alphabetapruning.js"></script> -->
+        <script type="text/javascript" src="scripts/minimax_alphabetapruning_both_AI.js"></script>
+        <!-- <script type="text/javascript" src="scripts/minimax_alphabetapruning_both_AI_2.js"></script> -->
+        <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    </head>
+    <body>
+        <button id="start_AI" onclick="startmatch()">Start Game with AI</button>
+        <button id="store_results_csv" onclick="storeResultsCSV()">Store Results</button>
+        <div id="boardCustom" class="boardCustom" style="width: 500px"></div>
+
+        <div class="info">
+            <br>
+            <span>Search depth:</span>
+            <select id="depth">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        
+            <div class="stats">
+                <h3>Stats observed - <span id="pruned"></span></h3>
+                <div>Total Positions evaluated by the algorithm: <span id="positions-evaluated"></span></div>
+                <div>Possible moves count at all states: <span id="possible-move-count"></span></div>
+                <div>Total Time elapsed (seconds): <span id="time-taken"></span></div>
+                <div>Average Positions calculated per second: <span id="positions-per-second"></span> </div>
+            </div>
+            <div id="movesPlayed" class="movesPlayed"></div>
+            <div id="chartContainer" style="height: 370px; width: 50%;"></div>
+            <div id="player1timecomplexity" style="height: 370px; width: 50%;"></div>
+            <div id="player2timecomplexity" style="height: 370px; width: 50%;"></div>
+            <div id="playerspositionsevaluated" style="height: 370px; width: 50%;"></div>
+            <div id="playerpositionsevaluated_singleLine" style="height: 370px; width: 50%;"></div>
+            <div id="player1timecomplexity_multi_y_player1" style="height: 370px; width: 50%;"></div>
+            <div id="player1timecomplexity_multi_y_player2" style="height: 370px; width: 50%;"></div>
+        </div>
+    </body>
+</html>
