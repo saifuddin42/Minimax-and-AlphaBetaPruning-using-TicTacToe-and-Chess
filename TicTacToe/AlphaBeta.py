@@ -123,13 +123,13 @@ def maximizerAlphaBeta(alpha, beta):
                 # set back the field to empty for next call
                 currentBoard[i][j] = ' '
                 
-                # if the value is greater than beta, that means we have found the best possible value for the maximizer
-                if bestMaxVal >= beta:
-                    return (bestMaxVal, boardI, boardJ)
-                
                 # update alpha
                 if bestMaxVal > alpha:
                     alpha = bestMaxVal
+                    
+                # if the value is greater than beta, that means we have found the best possible value for the maximizer
+                if alpha >= beta:
+                    return (bestMaxVal, boardI, boardJ)
 
     # return the best value and it's associated indices
     return (bestMaxVal, boardI, boardJ)
@@ -178,13 +178,13 @@ def minimizerAlphaBeta(alpha, beta):
                 # set back the field to empty for next call
                 currentBoard[i][j] = ' '
                 
-                # if the value is less than alpha, that means we have found the best possible value for the minimizer
-                if bestMinVal <= alpha:
-                    return (bestMinVal, boardI, boardJ)
-
                 # update beta
                 if bestMinVal < beta:
                     beta = bestMinVal
+                    
+                # if the value is less than alpha, that means we have found the best possible value for the minimizer
+                if alpha >= beta:
+                    return (bestMinVal, boardI, boardJ)
 
     # return the best value and it's associated indices
     return (bestMinVal, boardI, boardJ)
@@ -226,7 +226,7 @@ def playAlphaBeta():
             moveCounter = 0
             
             start = time.time()
-            (val, boardI, boardJ) = maximizerAlphaBeta(-9999, 9999)
+            (val, boardI, boardJ) = maximizerAlphaBeta(float('-inf'), float('inf'))
             end = time.time()
             print('Time Taken: {}s'.format(end - start))
             print('Best Move i,j = {},{}'.format(boardI, boardJ))
@@ -244,7 +244,7 @@ def playAlphaBeta():
             print('\nO\'s turn:')
             moveCounter = 0
             start = time.time()
-            (val, boardI, boardJ) = minimizerAlphaBeta(-9999, 9999)
+            (val, boardI, boardJ) = minimizerAlphaBeta(float('-inf'), float('inf'))
             end = time.time()
             print('Time Taken: {}s'.format(end - start))
             print('Best Move i,j = {},{}'.format(boardI, boardJ))
